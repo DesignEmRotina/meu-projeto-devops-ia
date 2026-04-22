@@ -1,0 +1,89 @@
+--- 
+name: design-orientado-a-domínio
+description: "Planejar e direcionar o trabalho de Domain-Driven Design, desde a modelagem estratégica até a implementação tática e os padrões de arquitetura orientados a eventos."
+risk: seguro
+source: própria
+tags: "[ddd, domínio, contexto delimitado, arquitetura]"
+date_added: "27/02/2026"
+---
+
+# Domain-Driven Design
+
+## Use esta habilidade quando
+
+- Você precisar modelar um domínio de negócios complexo com limites explícitos.
+
+- Você quiser decidir se o DDD completo justifica a complexidade adicional.
+
+- Você precisar conectar decisões de design estratégico a padrões de implementação.
+
+- Você estiver planejando CQRS, Event Sourcing, Sagas ou projeções a partir das necessidades do domínio.
+
+## Não use esta habilidade quando
+
+- O problema for um CRUD simples com baixa complexidade de negócios.
+
+- Você precisar apenas de correções de bugs localizados.
+
+- Não houver acesso a conhecimento do domínio e nenhum especialista de produto substituto.
+
+## Instruções
+
+1. Realize uma verificação de viabilidade antes de se comprometer com o DDD completo.
+
+2. Produza primeiro os artefatos estratégicos: subdomínios, contextos delimitados, glossário da linguagem.
+
+3. Direcione para habilidades especializadas com base na tarefa atual.
+
+4. Defina os critérios de sucesso e as evidências para cada etapa.
+
+### Verificação de viabilidade
+
+Use o DDD completo somente quando pelo menos duas das seguintes condições forem verdadeiras:
+
+- As regras de negócio são complexas ou mudam rapidamente.
+
+- Várias equipes estão causando colisões de modelos.
+
+- Os contratos de integração são instáveis.
+
+- A auditabilidade e os invariantes explícitos são críticos.
+
+### Mapa de roteamento
+
+- Modelo estratégico e limites: `@ddd-strategic-design`
+- Integrações e traduções entre contextos: `@ddd-context-mapping`
+- Modelagem de código tático: `@ddd-tactical-patterns`
+- Separação de leitura/escrita: `@cqrs-implementation`
+- Histórico de eventos como fonte da verdade: `@event-sourcing-architect` e `@event-store-design`
+- Fluxos de trabalho de longa duração: `@saga-orchestration`
+- Modelos de leitura: `@projection-patterns`
+- Registro de decisões: `@architecture-decision-records`
+
+Caso precise de modelos, abra `referencias/entregas-ddd.md`.
+
+## Requisitos de saída
+
+Sempre retorne:
+
+- Escopo e premissas
+- Estágio atual (estratégico, tático ou baseado em eventos)
+- Artefatos explícitos produzidos
+- Riscos em aberto e recomendação para o próximo passo
+
+## Exemplos
+
+```texto
+Use @domain-driven-design para avaliar se esta plataforma de faturamento deve adotar DDD completo.
+
+Em seguida, redirecione para a próxima habilidade correta e liste os artefatos que devemos produzir esta semana.
+
+```
+
+## Limitações
+
+- Esta habilidade não substitui workshops presenciais com especialistas do domínio.
+
+- Ela não fornece geração de código específica para frameworks.
+
+- Ela não deve ser usada como justificativa para superdimensionar sistemas simples.
